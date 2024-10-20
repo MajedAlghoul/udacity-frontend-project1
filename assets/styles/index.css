@@ -1,0 +1,91 @@
+@import url(pages.css);
+@import url(home.css);
+
+body {
+  margin: 0;
+  background-color: #f5f5f6;
+  font-family: Inter;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: #ffffff50;
+  backdrop-filter: blur(22px);
+  border-bottom: 1px solid #00000010;
+  z-index: 999;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#outer-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#inner-container {
+  display: flex;
+  width: calc(100% - 64px);
+  height: calc(100% - 100px);
+  margin-top: 100px;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: 32px;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding: 10px;
+  padding-bottom: 6px;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #00000020;
+  background-color: #f1f1f1;
+  font-size: 14px;
+}
+
+.footer-socials {
+  align-items: center;
+}
+
+.footer-middle-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #575757;
+  backdrop-filter: blur(20px);
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #999999;
+}
