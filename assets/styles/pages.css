@@ -3,6 +3,24 @@
   width: 100%;
   grid-template-columns: 2fr 1fr;
   gap: 32px;
+  justify-content: center;
+}
+
+.article-figure {
+  width: 100%;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.article-reference {
+  color: blue;
+}
+
+.article-author-image {
+  width: 38px;
 }
 
 .content-section {
@@ -19,7 +37,7 @@
 #page-inner-grid {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, 340px);
+  grid-template-columns: repeat(auto-fit, minmax(auto, 340px));
   gap: 32px;
 }
 
@@ -38,6 +56,10 @@
   }
 }
 
+figure {
+  margin-bottom: 80px;
+}
+
 .article-text-container {
   width: calc(100% - 64px);
 }
@@ -45,6 +67,12 @@
 .article-text {
   padding: 20px;
   line-height: 2;
+  font-size: max(1em, 1vw);
+}
+
+.article-inner-titles {
+  padding-left: 20px;
+  font-size: max(1.1em, 2vw);
 }
 
 .page-article-information {
@@ -80,6 +108,18 @@
   .article-text {
     line-height: 1.4;
   }
+
+  .content-section {
+    width: calc(100vw - 32px);
+  }
+
+  .side-section {
+    width: calc(100vw - 32px);
+  }
+}
+
+.article-inner-blockquote {
+  margin-left: 20px;
 }
 
 .page-auther-outer {
@@ -92,6 +132,7 @@
 }
 .page-auther-inner {
   margin-left: 20px;
+  font-size: max(0.8em, 0.8vw);
 }
 
 .article-titles {
@@ -100,11 +141,10 @@
 }
 
 .article-title-text {
-  font-size: 200%;
+  font-size: max(1.2em, 3vw);
 }
-
 .article-desc-text {
-  font-size: 100%;
+  font-size: max(0.8em, 1.8vw);
   color: #00000090;
 }
 
@@ -120,6 +160,7 @@
   flex-direction: column;
   width: 90%;
   height: 2px;
+  margin-bottom: 40px;
 }
 
 .separator-dark {
@@ -136,14 +177,22 @@
 .share-button {
   position: relative;
   z-index: 6;
+  background: none;
+  outline: none;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+}
+.share-button-img {
+  width: 100%;
 }
 .share-button:hover::after {
   content: "";
   display: block;
   position: absolute;
   top: 50%;
-  left: -40%;
-  transform: translateY(-50%);
+  left: -50%;
+  transform: translate(12%, -54%);
   border-radius: 999px;
   background-color: #00000020;
   width: 50px;
@@ -154,7 +203,7 @@
   content: " cant copy without js :(";
   display: block;
   position: absolute;
-  top: -8px;
+  top: -12px;
   right: 60px;
   border-radius: 14px;
   background-color: #0f0f0f;
